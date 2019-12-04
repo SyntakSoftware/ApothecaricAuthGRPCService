@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Apothecaric.Authentication.Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,6 +28,7 @@ namespace Apothecaric.Authentication.Service
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGrpcService<AuthenticationService>();
 
                 endpoints.MapGet("/", async context =>
                 {
