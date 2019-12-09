@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Apothecaric.Authentication.Service.Protos;
+﻿using Apothecaric.Authentication.Service.Protos;
 using Grpc.Core;
+using System.Threading.Tasks;
 
 namespace Apothecaric.Authentication.Service.Services
 {
