@@ -6,9 +6,9 @@ namespace Apothecaric.Authentication.Service.Services
 {
     public class AuthenticationService : Protos.Authentication.AuthenticationBase
     {
-        public override async Task<AuthenticatedUserResponse> CreateToken(LoginRequest request, ServerCallContext context)
+        public override Task<AuthenticatedUserResponse> CreateToken(LoginRequest request, ServerCallContext context)
         {
-            return await Task.FromResult(new AuthenticatedUserResponse
+            return Task.FromResult(new AuthenticatedUserResponse
             {
                 AuthToken = "12345678987654321",
                 RefreshToken = "222333444555",
@@ -17,9 +17,9 @@ namespace Apothecaric.Authentication.Service.Services
             });
         }
 
-        public override async Task<AuthenticatedUserResponse> RefreshToken(RefreshTokenRequest request, ServerCallContext context)
+        public override Task<AuthenticatedUserResponse> RefreshToken(RefreshTokenRequest request, ServerCallContext context)
         {
-            return await Task.FromResult(new AuthenticatedUserResponse
+            return Task.FromResult(new AuthenticatedUserResponse
             {
                 AuthToken = "98765432123456789",
                 RefreshToken = "555444333222",
